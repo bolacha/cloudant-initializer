@@ -1,0 +1,26 @@
+{
+  "name": "couchdb-initializer",
+  "version": "1.0.0",
+  "description": "Couchdb Initializer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasulcas/couchdb-initializer.git"
+  },
+  "keywords": [
+    "couchdb",
+    "populate",
+    "initializer",
+    "views",
+    "node"
+  ],
+  "author": "Lucas Costa Oliveira <lucas@ulcas.com> (http://blog.ulcas.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucasulcas/couchdb-initializer/issues"
+  },
+  "homepage": "https://github.com/lucasulcas/couchdb-initializer#readme"
+}
