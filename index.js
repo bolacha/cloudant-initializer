@@ -1,14 +1,15 @@
 var Q	= require('q');
 
-var createDatabase  		= require('./createDatabase');
-var createViews     		= require('./createViews');
-var populateDatabase		= require('./populateDatabase');
+var createDatabase  		= require('./lib/createDatabase');
+var createViews     		= require('./lib/createViews');
+var populateDatabase		= require('./lib/populateDatabase');
 
 module.exports = Database;
 
-function Database(database_url, database_name) {
+function Database(database_url, database_name, root_path) {
 	this.database_url = database_url;
 	this.database_name = database_name;
+	this.root_path = root_path;
 }
 
 Database.prototype.init = function() {
@@ -20,7 +21,7 @@ Database.prototype.init = function() {
 	}
 
 	var database = new createDatabase(this.database_url,this.database_name);
-	var views 	 = new createViews(this.database_url,this.database_name);
+	var views 	 = new createViews(this.database_url,this.database_name, this.root_path);
 	//var populate = new populateDatabase(database_url,database_name);
 
 	database.create()
